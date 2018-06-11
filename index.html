@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Unit-4-Game</title>
+
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <!-- Bootstrap CSS CDN  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <!-- Main Bootstrap Search -->
+    <div class="container">
+        <!-- Jumbotron for Title -->
+        <!--div class="jumbotron" style="background-color: rgb(58, 90, 32) ; color: white;"-->
+        <div class="jumbotron">
+            <h1 class="text-center">
+                <strong>
+                    <i class="fa fa-gamepad"></i>Crystal Collector</strong>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <br>
+                <!-- First panel is for the instructions for the game -->
+                <div class="card">
+                    <div class="card-header">
+                            <i class="fa fa-list-alt"></i><strong>Instructions</strong>       
+                    </div>
+                    <div class="card-body">
+                            <ul class="list-group">
+                                    <li>You will be given a random number at the start of the game.</li>
+                                    <li>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</li>
+                                    <li>You win the game matching your total score to the random number, you loose the game if your total score exceeds the random number.</li>
+                                    <li>The value of the crystals are hidden from you until you click on it.</li>
+                                    <li>Each time when the game starts the game will change the values of each crystal.</li>
+                                </ul>
+                    </div>
+                </div>
+        </div>
+        <!--Section for displaying stats for the game-->
+        <div class="row stats-section">
+            <div class="col-md-3 col-sm-12">
+                <br>
+                <span class="badge badge-dark">
+                    <!--Display Random Number using jquery-->
+                    <h1 id="random-num"></h1>
+                </span>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <div id = "win">
+                    <i class="fa fa-trophy"></i>
+                    <strong>You win</strong>
+                </div>
+                <div id = "loose">
+                        <strong>You loose</strong>
+                    </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <h2 class="row">Wins</h2>
+                <!--Display number of wins using jquery-->
+                <div class="row tally" id="wins"></div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <h2 class="row">Losses</h2>
+                  <!--Display number of losses using jquery-->
+                <div class="row tally" id="losses"></div>
+            </div>
+        </div>
+        <!--Section for displaying the crystal images as buttons-->
+        <div class="row crystals-section">
+                <div class="col-md-3 col-sm-12">
+                   <button id="red"><img class="jems"  src="assets/images/red-crystal.png"></button>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <button id="blue"><img class="jems" src="assets/images/blue-crystal.jpg"></button>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <button id="yellow"><img class="jems" src="assets/images/yellow-crystal.jpg"></button>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <button id="green"><img class="jems" src="assets/images/green-crystal.jpg"></button>
+                </div>
+        </div>
+        <!--Section for displaying the total score that tallied as the crystals are clicked-->
+        <div class="row score-section">
+                <div class="col-md-4 col-sm-12">
+                    <br>
+                    <div>
+                        Your Total Score is: 
+                    </div>
+            
+                </div>
+                <div class="col-md-8 col-sm-12">
+                    <span class="badge badge-dark">
+                         <!--Display total score using jquery-->
+                        <h1 id="total-score"></h1>
+                    </span>
+                </div>
+            </div>
+    </div>
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Code to the JavaScript File -->
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
